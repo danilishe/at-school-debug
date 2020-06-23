@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Debug {
 
 //            Быстрый хинт по настройке панели Project:
@@ -25,44 +28,31 @@ public class Debug {
 //        - пушим изменения
 //        - несколько слов о нескольких ремоутах
 
-    // Help -> Keymap Reference
 
-    // TODO psvm (Live Templates)
-    // Ctrl+Alt-S
-
-    // TODO sout
-
-    // TODO serr
-
-    // TODO create integer ArrayList -- Ctrl-Alt-V
-
-    // TODO fori -- fill with random number
-
-    // TODO iter -- serr -- add random number
-
-    // todo Shift-F6 -- rename var
-
-    // todo iter -- count billionare if > 1_000_000_000    regular if 0 > x < 1_000_000_000     default == 0
-
-    // todo soutv summ
-
-    // CTRL+ALT+L
-
-    // Square selection
-
-    // Ctrl+Shift Up/Down
-
-    // Shift-Shift
-
-    // F2
-
-    // Ctrl + Q
-
-    // Ctrl + B
-
-    // Ctrl + E
-
-    // Ctrl-Alt-O
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        System.err.println("Error");
+        List<Integer> persons = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            persons.add((int) Math.random() * Integer.MAX_VALUE);
+        }
+        int billionare = 0;
+        int defaults = 0;
+        int regular = 0;
+        for (Integer person : persons) {
+            person += (int) Math.random() * Integer.MAX_VALUE;
+            if (person > 1_000_000_000)
+                billionare++;
+            else if (person > 0)
+                regular++;
+            else if (person == 0)
+                defaults++;
+        }
+        System.err.println("defaults = " + defaults);
+        System.err.println("regular = " + regular);
+        System.err.println("billionare = " + billionare);
+        System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
+    }
 
 
 // создаём коммит и пушим

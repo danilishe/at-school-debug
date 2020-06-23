@@ -41,13 +41,13 @@ public class Debug {
         int regular = 0;
         for (Integer person : persons) {
             person += getRandom();
-            if (person > 1_000_000_000) {
+            if (person > 1_000_000_000 || person < 0) {
                 billionare++;
             } else if (person > 0)
                 regular++;
-            else if (person == 0)
-                defaults++;
+            else defaults++;
         }
+
         System.err.println("defaults = " + defaults);
         System.err.println("regular = " + regular);
         System.err.println("billionare = " + billionare);

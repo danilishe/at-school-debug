@@ -9,7 +9,7 @@ public class HomeTask2 {
 
         List<Integer> numbers = new ArrayList<>();
         for (int i = 0; i < 70; i++) {
-            numbers.add((int) (Math.random() * 500));
+            numbers.add(getValues());
         }
 
         int low = 0;
@@ -17,7 +17,7 @@ public class HomeTask2 {
         int big = 0;
 
         for (Integer number : numbers) {
-            number += (int) (Math.random() * 500);
+            number += getValues();
             if (number < 200) {
                 low++;
             } else if (number < 400 && number > 200) {
@@ -31,6 +31,10 @@ public class HomeTask2 {
         System.out.println("average = " + average);
         System.out.println("big = " + big);
         System.out.println("low + average + big = " + low + average + big);
+    }
+
+    private static int getValues() {
+        return (int) (Math.random() * 500);
     }
 }
 

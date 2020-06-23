@@ -40,7 +40,7 @@ public class Debug {
         int defaults = 0;
         int regular = 0;
         for (Integer person : persons) {
-            person += (int) Math.random() * Integer.MAX_VALUE;
+            person += (int) Math.random() * Integer.MAX_VALUE + 1;
             if (person > 1_000_000_000)
                 billionare++;
             else if (person > 0)

@@ -18,7 +18,20 @@ public class HomeTask2 {
 
         for (Integer number : numbers) {
             number += (int) (Math.random() * 500);
+            if (number < 200) {
+                low++;
+            } else if (number < 400 && number > 200) {
+                average++;
+            } else if (number > 400) {
+                big++;
+            }
         }
-    }
 
+        System.out.println("low = " + low);
+        System.out.println("average = " + average);
+        System.out.println("big = " + big);
+        System.out.println("low + average + big = " + low + average + big);
+    }
 }
+
+

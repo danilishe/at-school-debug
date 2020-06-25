@@ -11,6 +11,24 @@ public class Debug {
         for (int i = 0; i < 100; i++) {
             list.add(getRandom());
         }
+        int positive = 0;
+        int zero = 0;
+        int negative = 0;
+        for (Integer element : list) {
+            element += getRandom();
+            if (element > 0) {
+                positive++;
+            } else if (element == 0) {
+                zero++;
+            } else {
+                negative++;
+            }
+        }
+
+        System.out.println("positive = " + positive);
+        System.out.println("zero = " + zero);
+        System.out.println("negative = " + negative);
+        System.out.println("All numbers = " + (positive + zero + negative));
     }
 
     private static int getRandom() {

@@ -1,6 +1,31 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Debug {
+
+    public static void main(String[] args) {
+        System.out.println("Подсчет разброса случайных чисел 0-1000");
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i < 100; i++) {
+            int i1 = (int) (Math.random() * 1001);
+            list.add(i1);
+        }
+
+        int even = 0;
+        int notEven = 0;
+
+        for (Integer integer : list) {
+            if (integer % 2 == 0) even++;
+            else notEven++;
+        }
+
+        System.out.println("even = " + even);
+        System.out.println("notEven = " + notEven);
+    }
 
 //            Быстрый хинт по настройке панели Project:
 //            - быстрый доступ из кода, быстрый доступ к коду

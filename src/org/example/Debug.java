@@ -1,98 +1,41 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class Debug {
+    public static void main(String[] args) {
+        System.out.println("Hello teacher!");
+        System.err.println("Create ArrayList");
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            list.add(getRandom());
+        }
 
-//            Быстрый хинт по настройке панели Project:
-//            - быстрый доступ из кода, быстрый доступ к коду
-//            - плоские пакеты
-//            - настройки идеи
-//            - настройки проекта
-//
-//            Добавляем интеграцию гита в идею к существующему проекту через основное меню идеи
-//            - устанавливаем плагин gitignore
-//            - устанавливаем плагин KeyPromoter
-//
-//            Коротко об интерфейсе идеи: где что касательно гита::
-//            - вызов панели гита, скрытие всех панелей
-//            - кнопки пуша и пула
+        int positive = 0;
+        int zero = 0;
+        int negative = 0;
+        for (Integer element : list) {
+            element += getRandom();
+            if (element > 0) {
+                positive++;
+            } else if (element == 0) {
+                zero++;
+            } else {
+                negative++;
+            }
+        }
 
-    // добавляем к проекту поддержку VCS
-
-    // создаём .gitignore
-
-//        Создаём проект на гитхабе
-//        - добавляем в проект ремоут
-//        - пушим изменения
-//        - несколько слов о нескольких ремоутах
-
-    // Help -> Keymap Reference
-
-    // TODO psvm (Live Templates)
-    // Ctrl+Alt-S
-
-    // TODO sout
-
-    // TODO serr
-
-    // TODO create integer ArrayList -- Ctrl-Alt-V
-
-    // TODO fori -- fill with random number
-
-    // TODO iter -- serr -- add random number
-
-    // todo Shift-F6 -- rename var
-
-    // todo iter -- count billionare if > 1_000_000_000    regular if 0 > x < 1_000_000_000     default == 0
-
-    // todo soutv summ
-
-    // CTRL+ALT+L
-
-    // Square selection
-
-    // Ctrl+Shift Up/Down
-
-    // Shift-Shift
-
-    // F2
-
-    // Ctrl + Q
-
-    // Ctrl + B
-
-    // Ctrl + E
-
-    // Ctrl-Alt-O
+        System.out.println("positive = " + positive);
+        System.out.println("zero = " + zero);
+        System.out.println("negative = " + negative);
+        System.out.println("All numbers = " + (positive + zero + negative));
 
 
-// создаём коммит и пушим
+    }
 
-    // fixme всё работает плохо -- почини меня используя презинтацию
-
-//        - добавляем ветку в репозиторий с новой фичей с несколькими коммитами
-//        - мёржим её в основную ветку, убеждаемся что проблем не возникло
-//        - пушим в репозиторий, убеждаемся, что в репозитории новой ветки нет
-//        - переключаемся на новую ветку, пушим. убеждаемся, что ветка появилась.
-//        - делаем изменения в основной ветке.
-//        - примерно в тех же местах делаем изменения в новой ветке.
-//            - сливаем. решаем конфликты при слиянии.
-//            - различные виды просмотра различий в идее
-//        - разрешаем конфликты, мёржим.
-//            - новая ветка с добавлением фичи
-//        - делаем слияние ребейзом
-//        - пушим всё на ремоут.
-//
-//            - убеждаемся, что можем откатываться в истории:
-//            - софт ресеты
-//        - хардесеты (только в ветках с ремоутом)
-//
-//        - черипик
-//
-//        Просмотр истории:
-//            - посмотреть кто совершил коммит на полях
-//        - посмотреть в каком коммите
-//        - сравнить с удалённой веткой при наличии закоммиченных, но не запушенных изменениях
-//
-//        Возможности идеи в плане истории.
-
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
 }

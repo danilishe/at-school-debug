@@ -11,8 +11,7 @@ public class Debug {
         List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
-            int i1 = (int) (Math.random() * 1001);
-            list.add(i1);
+            list.add((int) (Math.random() * 1001));
         }
 
         int even = 0;
@@ -23,7 +22,7 @@ public class Debug {
         for (Integer integer : list) {
             if (integer % 2 == 0) even++;
             else notEven++;
-            if (integer<500) less500++;
+            if (integer < 500) less500++;
             else more500++;
         }
 

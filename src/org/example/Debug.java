@@ -17,14 +17,20 @@ public class Debug {
 
         int even = 0;
         int notEven = 0;
+        int less500 = 0;
+        int more500 = 0;
 
         for (Integer integer : list) {
             if (integer % 2 == 0) even++;
             else notEven++;
+            if (integer<500) less500++;
+            else more500++;
         }
 
         System.out.println("even = " + even);
         System.out.println("notEven = " + notEven);
+        System.out.println("less500 = " + less500);
+        System.out.println("more500 = " + more500);
     }
 
 //            Быстрый хинт по настройке панели Project:

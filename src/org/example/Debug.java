@@ -1,6 +1,10 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Debug {
+
 
 //            Быстрый хинт по настройке панели Project:
 //            - быстрый доступ из кода, быстрый доступ к коду
@@ -29,45 +33,40 @@ public class Debug {
 
     // TODO psvm (Live Templates)
     // Ctrl+Alt-S
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+        System.err.println("Error");
+        List<Integer> persons = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            persons.add((int) Math.random() * Integer.MAX_VALUE);
+        }
+        int billionare = 0;
+        int regular = 0;
+        int defaults = 0;
+        for (Integer person : persons) {
+            person += (int) Math.random() * Integer.MAX_VALUE;
+            if (person > 1000000000)
+                billionare++;
+            else if (person > 0)
+                regular++;
+            else if (person == 0)
+                defaults++;
+        }
+        System.out.println("defaults = " + defaults);
+        System.out.println("regular = " + regular);
+        System.out.println("billionare = " + billionare);
+        System.out.println("regular + billionare = " + regular + billionare);
+    }
+}
 
-    // TODO sout
+// Ctrl + E
 
-    // TODO serr
-
-    // TODO create integer ArrayList -- Ctrl-Alt-V
-
-    // TODO fori -- fill with random number
-
-    // TODO iter -- serr -- add random number
-
-    // todo Shift-F6 -- rename var
-
-    // todo iter -- count billionare if > 1_000_000_000    regular if 0 > x < 1_000_000_000     default == 0
-
-    // todo soutv summ
-
-    // CTRL+ALT+L
-
-    // Square selection
-
-    // Ctrl+Shift Up/Down
-
-    // Shift-Shift
-
-    // F2
-
-    // Ctrl + Q
-
-    // Ctrl + B
-
-    // Ctrl + E
-
-    // Ctrl-Alt-O
+// Ctrl-Alt-O
 
 
 // создаём коммит и пушим
 
-    // fixme всё работает плохо -- почини меня используя презинтацию
+// fixme всё работает плохо -- почини меня используя презинтацию
 
 //        - добавляем ветку в репозиторий с новой фичей с несколькими коммитами
 //        - мёржим её в основную ветку, убеждаемся что проблем не возникло
@@ -95,4 +94,4 @@ public class Debug {
 //
 //        Возможности идеи в плане истории.
 
-}
+

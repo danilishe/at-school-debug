@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Debug {
 
 //            Быстрый хинт по настройке панели Project:
@@ -29,12 +32,15 @@ public class Debug {
 
     public static void main(String[] args) {
         System.out.println("Hello!");
+        System.out.println("Error");
+        List<Integer> persons = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            persons.add(getRandom());
+        }
     }
-
-
-    // TODO serr
-
-    // TODO create integer ArrayList -- Ctrl-Alt-V
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
 
     // TODO fori -- fill with random number
 

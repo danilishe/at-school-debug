@@ -37,20 +37,26 @@ public class Debug {
         for (int i = 0; i < 100; i++) {
             persons.add(getRandom());
         }
+        int billionare = 0;
+        int defaults = 0;
+        int regular = 0;
+        for (Integer person : persons) {
+            person += getRandom();
+            if (person > 1_000_000_000 || person < 0) {
+                billionare++;
+            } else if (person > 0)
+                regular++;
+            else defaults++;
+        }
+
+        System.err.println("defaults = " + defaults);
+        System.err.println("regular = " + regular);
+        System.err.println("billionare = " + billionare);
+        System.err.println("regular + billionare+defaults = " + (regular + billionare + defaults));
     }
     private static int getRandom() {
         return (int) (Math.random() * Integer.MAX_VALUE);
     }
-
-    // TODO fori -- fill with random number
-
-    // TODO iter -- serr -- add random number
-
-    // todo Shift-F6 -- rename var
-
-    // todo iter -- count billionare if > 1_000_000_000    regular if 0 > x < 1_000_000_000     default == 0
-
-    // todo soutv summ
 
     // CTRL+ALT+L
 

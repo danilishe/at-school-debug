@@ -26,6 +26,11 @@ public class Debug {
                 sadPeople++;
             }
         }
+
+        System.out.println("rich = " + rich);
+        System.out.println("regularFolk = " + regularFolk);
+        System.out.println("sadPeople = " + sadPeople);
+        System.out.println("rich + regularFolk + sadPeople = " + (rich + regularFolk + sadPeople));
     }
 
     private static Integer getRandom() {

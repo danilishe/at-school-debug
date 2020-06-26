@@ -26,6 +26,6 @@ public class Debug {
         System.err.println("defaults = " + defaults);
         System.err.println("regular = " + regular);
         System.err.println("billionaire = " + billionare);
-        System.err.println("regular + billionaire + defaults = " + regular + billionare + defaults);
+        System.err.println("regular + billionaire + defaults = " + (regular + billionare + defaults));
     }
 }

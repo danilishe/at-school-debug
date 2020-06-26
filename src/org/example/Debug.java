@@ -38,7 +38,7 @@ public class Debug {
         System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            persons.add((int) Math.random() * Integer.MAX_VALUE);
+            persons.add((int) Math.random() * Integer.MAX_VALUE+1);
         }
         int billionare = 0;
         int regular = 0;

@@ -27,9 +27,7 @@ public class Debug {
 
     // Help -> Keymap Reference
 
-    // TODO psvm (Live Templates)
-    // Ctrl+Alt-S
-
+    public static void main(String[] args) {}
     // TODO sout
 
     // TODO serr

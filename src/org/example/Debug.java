@@ -27,8 +27,10 @@ public class Debug {
 
     // Help -> Keymap Reference
 
-    public static void main(String[] args) {}
-    // TODO sout
+    public static void main(String[] args) {
+        System.out.println("Hello!");
+    }
+
 
     // TODO serr
 

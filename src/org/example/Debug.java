@@ -12,6 +12,20 @@ public class Debug {
         for (int i = 0; i < 100; i++) {
             persons.add(getRandom());
         }
+        int rich = 0;
+        int regularFolk = 0;
+        int sadPeople = 0;
+
+        for (Integer person : persons) {
+            long personAfterLottery = ((long) person) + getRandom();
+            if (personAfterLottery > 1_000_000_000L) {
+                rich++;
+            } else if (personAfterLottery > 0) {
+                regularFolk++;
+            } else {
+                sadPeople++;
+            }
+        }
     }
 
     private static Integer getRandom() {

@@ -10,7 +10,7 @@ public class Debug {
         int num1 = getInt();
         int num2 = getInt();
         char operation = getOperation();
-        int result = calc(num1,num2,operation);
+        int result = calc(num1, num2, operation);
         System.out.println("Результат: " + result);
     }
 
@@ -30,7 +30,7 @@ public class Debug {
     public static char getOperation() {
         System.out.println("Введите операцию: ");
         char operation;
-        if(scanner.hasNext()) {
+        if (scanner.hasNext()) {
             operation = scanner.next().charAt(0);
         } else {
             System.out.println("Допущена ошибка при вводе операции. Попробуйте ещё раз");
@@ -40,7 +40,7 @@ public class Debug {
         return operation;
     }
 
-    public static int calc (int num1, int num2, char operation) {
+    public static int calc(int num1, int num2, char operation) {
         int result;
         switch (operation) {
             case '+':
@@ -57,7 +57,7 @@ public class Debug {
                 break;
             default:
                 System.out.println("Неизвестная операция. Попробуйте снова ('+', '-', '*', '/')");
-                result = calc(num1,num2,getOperation());
+                result = calc(num1, num2, getOperation());
         }
         return result;
     }

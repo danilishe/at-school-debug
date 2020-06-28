@@ -52,6 +52,7 @@ public class Debug {
         System.err.println("regular = " + regular);
         System.err.println("billionare = " + billionare);
         System.err.println("regular + billionare+defaults = " + (regular + billionare + defaults));
+        System.out.println("Program successfully ended");
     }
 
     private static int getRandom() {

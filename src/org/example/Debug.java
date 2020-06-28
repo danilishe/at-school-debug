@@ -1,6 +1,34 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Debug {
+    public static void main(String[] args) {
+        List<Integer> persons = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            persons.add((int) Math.random() * Integer.MAX_VALUE);
+        }
+        int billionaires = 0;
+        int defaults = 0;
+        int regular = 0;
+        for (Integer person : persons) {
+            person += ((int) Math.random() * Integer.MAX_VALUE);
+            if (person > 1_000_000_000) {
+                billionaires++;
+            } else if (person > 0)
+                regular++;
+            else defaults++;
+        }
+
+        System.err.println("defaults = " + defaults);
+        System.err.println("regular = " + regular);
+        System.err.println("billionaires = " + billionaires);
+        System.err.println("regular + billionaires + defaults = " + (regular + billionaires + defaults));
+    }
+
+
+
 
 //            Быстрый хинт по настройке панели Project:
 //            - быстрый доступ из кода, быстрый доступ к коду

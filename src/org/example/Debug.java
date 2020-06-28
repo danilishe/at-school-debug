@@ -50,11 +50,11 @@ public class Debug {
             System.err.println("defaults = " + defaults);
             System.err.println("regular = " + regular);
             System.err.println("billionare = " + billionare);
-            System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
+            System.err.println("all = " + (regular + billionare + defaults));
         }
 
             private static int getRandom() {
-                         return (int) (Math.random() * Integer.MAX_VALUE);
+            return (int) (Math.random() * Integer.MAX_VALUE);
     }
 }
 

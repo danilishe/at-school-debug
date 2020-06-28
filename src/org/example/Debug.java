@@ -7,7 +7,11 @@ public class Debug {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        int num1 = getInt();
+        int num2 = getInt();
+        char operation = getOperation();
+        int result = calc(num1,num2,operation);
+        System.out.println("Результат: " + result);
     }
 
     public static int getInt() {
@@ -34,6 +38,28 @@ public class Debug {
             operation = getOperation();
         }
         return operation;
+    }
+
+    public static int calc (int num1, int num2, char operation) {
+        int result;
+        switch (operation) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("Неизвестная операция. Попробуйте снова ('+', '-', '*', '/')");
+                result = calc(num1,num2,getOperation());
+        }
+        return result;
     }
 
 }

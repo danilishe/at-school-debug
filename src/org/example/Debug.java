@@ -7,13 +7,13 @@ public class Debug {
     public static void main(String[] args) {
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            persons.add((int) Math.random() * Integer.MAX_VALUE);
+            persons.add(getRandom());
         }
         int billionaires = 0;
         int defaults = 0;
         int regular = 0;
         for (Integer person : persons) {
-            person += ((int) Math.random() * Integer.MAX_VALUE);
+            person += (getRandom());
             if (person > 1_000_000_000) {
                 billionaires++;
             } else if (person > 0)
@@ -21,13 +21,15 @@ public class Debug {
             else defaults++;
         }
 
-        System.err.println("defaults = " + defaults);
-        System.err.println("regular = " + regular);
-        System.err.println("billionaires = " + billionaires);
-        System.err.println("regular + billionaires + defaults = " + (regular + billionaires + defaults));
+        System.out.println("defaults = " + defaults);
+        System.out.println("regular = " + regular);
+        System.out.println("billionaires = " + billionaires);
+        System.out.println("regular + billionaires + defaults = " + (regular + billionaires + defaults));
     }
 
-
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
 
 
 //            Быстрый хинт по настройке панели Project:

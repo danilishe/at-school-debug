@@ -31,9 +31,8 @@ public class Debug {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-        System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
-        for (int i = 0; i < 200; i++) {
+        for (int i = 0; i < 250; i++) {
             persons.add(getRandom());
         }
         int billionare = 0;
@@ -51,7 +50,7 @@ public class Debug {
         System.err.println("defaults = " + defaults);
         System.err.println("regular = " + regular);
         System.err.println("billionare = " + billionare);
-        System.err.println("regular + billionare+defaults = " + (regular + billionare + defaults));
+        System.err.println("regular + billionare + defaults = " + (regular + billionare + defaults));
         System.out.println("Program successfully ended");
     }
 

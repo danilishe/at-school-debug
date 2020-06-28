@@ -34,13 +34,13 @@ public class Debug {
         System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            persons.add((int) Math.random() * Integer.MAX_VALUE);
+            persons.add(getRandom());
         }
         int billionare = 0;
         int defaults = 0;
         int regular = 0;
         for (Integer person : persons) {
-            person += (int) Math.random() * Integer.MAX_VALUE;
+            person += getRandom();
             if (person > 1_000_000_000)
                 billionare++;
             else if (person > 0)
@@ -54,10 +54,10 @@ public class Debug {
         System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
     }
 
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
 
-// создаём коммит и пушим
-
-    // fixme всё работает плохо -- почини меня используя презинтацию
 
 //        - добавляем ветку в репозиторий с новой фичей с несколькими коммитами
 //        - мёржим её в основную ветку, убеждаемся что проблем не возникло

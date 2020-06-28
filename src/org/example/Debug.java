@@ -23,4 +23,17 @@ public class Debug {
         return number;
     }
 
+    public static char getOperation() {
+        System.out.println("Введите операцию: ");
+        char operation;
+        if(scanner.hasNext()) {
+            operation = scanner.next().charAt(0);
+        } else {
+            System.out.println("Допущена ошибка при вводе операции. Попробуйте ещё раз");
+            scanner.next();
+            operation = getOperation();
+        }
+        return operation;
+    }
+
 }

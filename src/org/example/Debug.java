@@ -33,25 +33,28 @@ public class Debug {
         System.err.println("world");
         ArrayList<Integer> myList = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
+            myList.add(getRandom());
+            }
+            int billionare = 0;
+            int defaults = 0;
+            int regular = 0;
+            for (Integer person : myList) {
+                person += getRandom();
+                if (person > 1_000_000_000) {
+                    billionare++;
+                } else if (person > 0)
+                    regular++;
+                else if (person == 0)
+                    defaults++;
+            }
+            System.err.println("defaults = " + defaults);
+            System.err.println("regular = " + regular);
+            System.err.println("billionare = " + billionare);
+            System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
+        }
 
-            myList.add((int) Math.random() * Integer.MAX_VALUE);
-        }
-        int billionare = 0;
-        int defaults = 0;
-        int regular = 0;
-        for (Integer person : myList) {
-            person += (int) Math.random() * Integer.MAX_VALUE + 1;
-            if (person > 1_000_000_000)
-                billionare++;
-            else if (person > 0)
-                regular++;
-            else if (person == 0)
-                defaults++;
-        }
-        System.err.println("defaults = " + defaults);
-        System.err.println("regular = " + regular);
-        System.err.println("billionare = " + billionare);
-        System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
+            private static int getRandom() {
+                         return (int) (Math.random() * Integer.MAX_VALUE);
     }
 }
 

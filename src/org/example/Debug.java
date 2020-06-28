@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Debug {
 
 //            Быстрый хинт по настройке панели Project:
@@ -29,8 +31,31 @@ public class Debug {
     public static void main(String[] args) {
         System.out.println("hello");
         System.err.println("world");
-            
+        ArrayList<Integer> myList = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+
+            myList.add((int) Math.random() * Integer.MAX_VALUE);
+        }
+        int billionare = 0;
+        int defaults = 0;
+        int regular = 0;
+        for (Integer person : myList) {
+            person += (int) Math.random() * Integer.MAX_VALUE + 1;
+            if (person > 1_000_000_000)
+                billionare++;
+            else if (person > 0)
+                regular++;
+            else if (person == 0)
+                defaults++;
+        }
+        System.err.println("defaults = " + defaults);
+        System.err.println("regular = " + regular);
+        System.err.println("billionare = " + billionare);
+        System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
     }
+}
+
+
 
     // TODO create integer ArrayList -- Ctrl-Alt-V
 
@@ -93,4 +118,4 @@ public class Debug {
 //
 //        Возможности идеи в плане истории.
 
-}
+

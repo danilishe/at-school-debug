@@ -33,7 +33,7 @@ public class Debug {
         System.out.println("Hello World!");
         System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 200; i++) {
             persons.add(getRandom());
         }
         int billionare = 0;

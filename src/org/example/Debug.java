@@ -14,7 +14,7 @@ public class Debug {
         int regular = 0;
         for (Integer person : persons) {
             person += (getRandom());
-            if (person > 1_000_000_000) {
+            if (person > 1_000_000_000 || person < 0) {
                 billionaires++;
             } else if (person > 0)
                 regular++;

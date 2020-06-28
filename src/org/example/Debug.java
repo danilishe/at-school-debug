@@ -26,13 +26,11 @@ public class Debug {
 //        - несколько слов о нескольких ремоутах
 
     // Help -> Keymap Reference
-
-    // TODO psvm (Live Templates)
-    // Ctrl+Alt-S
-
-    // TODO sout
-
-    // TODO serr
+    public static void main(String[] args) {
+        System.out.println("hello");
+        System.err.println("world");
+            
+    }
 
     // TODO create integer ArrayList -- Ctrl-Alt-V
 

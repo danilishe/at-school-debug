@@ -45,12 +45,11 @@ public class Debug {
         int defaults = 0;
         for (Integer person : persons) {
             person += getRandom();
-            if (person > 1000000000) {
+            if (person > 1000000000 || person<0) {
                 billionare++;
             } else if (person > 0)
                 regular++;
-            else if (person == 0)
-                defaults++;
+            else defaults++;
         }
         System.out.println("defaults = " + defaults);
         System.out.println("regular = " + regular);

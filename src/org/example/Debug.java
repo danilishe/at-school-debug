@@ -38,26 +38,33 @@ public class Debug {
         System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            persons.add((int) Math.random() * Integer.MAX_VALUE+1);
+            persons.add(getRandom());
         }
         int billionare = 0;
         int regular = 0;
         int defaults = 0;
         for (Integer person : persons) {
-            person += (int) Math.random() * Integer.MAX_VALUE;
-            if (person > 1000000000)
+            person += getRandom();
+            if (person > 1000000000 || person<0) {
                 billionare++;
-            else if (person > 0)
+            } else if (person > 0)
                 regular++;
-            else if (person == 0)
-                defaults++;
+            else defaults++;
         }
         System.out.println("defaults = " + defaults);
         System.out.println("regular = " + regular);
         System.out.println("billionare = " + billionare);
-        System.out.println("regular + billionare = " + regular + billionare);
+        System.out.println("regular + billionare + defaults = " + (regular + billionare + defaults) );
+
+
+    }
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+
     }
 }
+
+
 
 // Ctrl + E
 

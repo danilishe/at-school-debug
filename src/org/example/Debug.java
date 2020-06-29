@@ -38,13 +38,13 @@ public class Debug {
         System.err.println("Error");
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            persons.add((int) Math.random() * Integer.MAX_VALUE);
+            persons.add(getRandom());
         }
         int billionare = 0;
         int regular = 0;
         int defaults = 0;
         for (Integer person : persons) {
-            person += (int) Math.random() * Integer.MAX_VALUE;
+            person += getRandom();
             if (person > 1000000000)
                 billionare++;
             else if (person > 0)
@@ -56,8 +56,16 @@ public class Debug {
         System.out.println("regular = " + regular);
         System.out.println("billionare = " + billionare);
         System.out.println("regular + billionare = " + regular + billionare);
+
+
+    }
+    private static int getRandom() {
+        return (int) Math.random() * Integer.MAX_VALUE;
+
     }
 }
+
+
 
 // Ctrl + E
 

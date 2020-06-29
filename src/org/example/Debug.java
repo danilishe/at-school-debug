@@ -45,9 +45,9 @@ public class Debug {
         int defaults = 0;
         for (Integer person : persons) {
             person += getRandom();
-            if (person > 1000000000)
+            if (person > 1000000000) {
                 billionare++;
-            else if (person > 0)
+            } else if (person > 0)
                 regular++;
             else if (person == 0)
                 defaults++;
@@ -55,12 +55,12 @@ public class Debug {
         System.out.println("defaults = " + defaults);
         System.out.println("regular = " + regular);
         System.out.println("billionare = " + billionare);
-        System.out.println("regular + billionare = " + regular + billionare);
+        System.out.println("regular + billionare + defaults = " + (regular + billionare + defaults) );
 
 
     }
     private static int getRandom() {
-        return (int) Math.random() * Integer.MAX_VALUE;
+        return (int) (Math.random() * Integer.MAX_VALUE);
 
     }
 }

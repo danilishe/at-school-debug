@@ -8,7 +8,7 @@ public class Debug {
         List<Integer> persons = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             persons.add(getRandom());
-    }
+        }
         int billionaire = 0;
         int defaults = 0;
         int regular = 0;
@@ -20,9 +20,14 @@ public class Debug {
                 regular++;
             else defaults++;
         }
-}
+        System.err.println("defaults = " + defaults);
+        System.err.println("regular = " + regular);
+        System.err.println("billionare = " + billionaire);
+        System.err.println("regular + billionare+defaults = " + (regular + billionaire + defaults));
+    }
+
 
     private static int getRandom() {
         return (int) (Math.random() * Integer.MAX_VALUE);
     }
-    }
+}

@@ -10,3 +10,8 @@ public class Debug {
             persons.add(getRandom());
     }
 }
+
+    private static int getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
+    }

@@ -11,15 +11,14 @@ public class Debug {
             list.add(getMet());
         }
         //Комент
-        int billionare =0;
+        int billionare = 0;
         int regular = 0;
         int defaults = 0;
-        for(Integer persons : list) {
+        for (Integer persons : list) {
             persons += getMet();
-            if(persons > 1_000_000_000 || persons < 0) {
+            if (persons > 1_000_000_000 || persons < 0) {
                 billionare++;
-            }
-            else if(persons > 0) {
+            } else if (persons > 0) {
                 regular++;
             } else defaults++;
         }

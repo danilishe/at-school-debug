@@ -17,18 +17,17 @@ public class Debug {
             int regular = 0;
             for (Integer person : persons) {
                 person += (int) getRandom() * Integer.MAX_VALUE;
-                if (person > 1_000_000_000)
+                if (person > 1_000_000_000 || person < 0)
                     billionare++;
                 else if (person > 0)
                     regular++;
-                else if (person == 0)
-                    defaults++;
+                else defaults++;
             }
 
             System.err.println("defaults = " + defaults);
             System.err.println("regular = " + regular);
             System.err.println("billionare = " + billionare);
-            System.err.println("regular + billionare+defaults = " + (regular + billionare + defaults));
+            System.err.println("regular + billionare + defaults = " + (regular + billionare + defaults));
         }
 
     private static double getRandom() {

@@ -10,13 +10,13 @@ public class Debug {
             System.err.println("Error");
             List<Integer> persons = new ArrayList<>();
             for (int i = 0; i < 100; i++) {
-                persons.add((int) Math.random() * Integer.MAX_VALUE);
+                persons.add((int) getRandom() * Integer.MAX_VALUE);
             }
             int billionare = 0;
             int defaults = 0;
             int regular = 0;
             for (Integer person : persons) {
-                person += (int) Math.random() * Integer.MAX_VALUE;
+                person += (int) getRandom() * Integer.MAX_VALUE;
                 if (person > 1_000_000_000)
                     billionare++;
                 else if (person > 0)
@@ -30,6 +30,10 @@ public class Debug {
             System.err.println("billionare = " + billionare);
             System.err.println("regular + billionare+defaults = " + regular + billionare + defaults);
         }
+
+    private static double getRandom() {
+        return (int) (Math.random() * Integer.MAX_VALUE);
+    }
 
 
 //            Быстрый хинт по настройке панели Project:
